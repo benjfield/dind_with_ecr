@@ -86,7 +86,7 @@ jobs:
           context: .
           file: ./Dockerfile
           platforms: linux/amd64
-          push: true
+          push: false
           tags: benjfield/dind_with_ecr:latest
       - name: Export digest
         run: |
