@@ -128,4 +128,4 @@ jobs:
         working-directory: ${{ runner.temp }}/digests
         run: |
           docker buildx imagetools create $(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
-            $(printf 'benjfield/dind_with_ecr@latest:%s ' *)
+            --tag benjfield/dind_with_ecr:latest
